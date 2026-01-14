@@ -9,7 +9,14 @@ import { SocialIcons } from "@/components/ui/social-icons"
 import { MusicToggleButton } from "@/components/ui/music-toggle-btn"
 import { AnimatedTitle } from "@/components/ui/animated-title"
 
-const AGENTS = [
+const AGENTS: Array<{
+  id: string;
+  name: string;
+  description: string;
+  imageSrc: string;
+  backgroundSrc: string;
+  disabled?: boolean;
+}> = [
   {
     id: "memes",
     name: "Vera",
