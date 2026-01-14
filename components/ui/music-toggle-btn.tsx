@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
+// @ts-expect-error - use-sound types issue with package.json exports
 import useSound from "use-sound"
 
 export const MusicToggleButton = () => {
