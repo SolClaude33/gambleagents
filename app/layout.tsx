@@ -5,23 +5,32 @@ import './globals.css';
 const orbitron = Orbitron({
   subsets: ['latin'],
   variable: '--font-orbitron',
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
 });
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
+  display: 'swap',
+  fallback: ['Georgia', 'serif'],
 });
 
 const bebas = Bebas_Neue({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-bebas',
+  display: 'swap',
+  fallback: ['Impact', 'Arial Black', 'sans-serif'],
 });
 
 const cormorant = Cormorant_Garamond({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-cormorant',
+  display: 'swap',
+  fallback: ['Georgia', 'serif'],
+  preload: false, // Disable preload to avoid build-time download issues
 });
 
 export const metadata: Metadata = {
