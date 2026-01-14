@@ -6,7 +6,6 @@ import Image from "next/image"
 import LoadingScreen from "@/components/LoadingScreen"
 import { AgentSlider } from "@/components/ui/agent-slider"
 import { SocialIcons } from "@/components/ui/social-icons"
-import { MusicToggleButton } from "@/components/ui/music-toggle-btn"
 import { AnimatedTitle } from "@/components/ui/animated-title"
 
 const AGENTS: Array<{
@@ -88,10 +87,6 @@ export default function Home() {
 
             <div className="absolute top-8 right-8 z-20">
               <SocialIcons />
-            </div>
-
-            <div className="fixed right-8 top-1/2 -translate-y-1/2 z-20">
-              <MusicToggleButton />
             </div>
 
             <AgentSlider
