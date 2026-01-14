@@ -7,6 +7,7 @@ declare module 'use-sound' {
     interrupt?: boolean;
     soundEnabled?: boolean;
     sprite?: { [key: string]: [number, number] };
+    loop?: boolean;
     onload?: () => void;
     onplay?: () => void;
     onend?: () => void;
@@ -14,8 +15,7 @@ declare module 'use-sound' {
     onstop?: () => void;
   }
 
-  export interface UseSoundReturn {
-    play: (options?: { id?: string; forceSoundEnabled?: boolean }) => void;
+  export interface UseSoundControls {
     pause: (id?: string) => void;
     stop: (id?: string) => void;
     sound: Howl | null;
@@ -26,5 +26,5 @@ declare module 'use-sound' {
   export default function useSound(
     src: string | string[],
     options?: UseSoundOptions
-  ): UseSoundReturn;
+  ): [() => void, UseSoundControls];
 }
